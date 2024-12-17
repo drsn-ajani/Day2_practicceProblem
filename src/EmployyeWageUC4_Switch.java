@@ -3,7 +3,7 @@ public class EmployyeWageUC4_Switch {
         System.out.println("Welcome to Employee Wage Computation Program on Master Branch");
 
         // UC-1
-//        int IS_EMPLOYEE_PRESENT = 1;
+        // UC-4
         final int EmployeeWagePerHour = 20;
         int working_hour;
 
@@ -11,7 +11,6 @@ public class EmployyeWageUC4_Switch {
         final int IS_PART_TIME_PRESENT = 2;
 
         int empCheck = (int) Math.floor(Math.random() * 100) % 3;
-//        double part_full = Math.floor(Math.random() * 100) % 2;
 
         System.out.println("empCheck is: " + empCheck);
 
@@ -31,8 +30,10 @@ public class EmployyeWageUC4_Switch {
                 working_hour = 0;
                 break;
         }
-
+        // UC-5
+        int working_days_in_month = 20;
         System.out.println("Employee Daily Wage is: " + working_hour*EmployeeWagePerHour);
+        System.out.println("Employee MONTHLY Wage is: " + working_hour * EmployeeWagePerHour * working_days_in_month);
 
 
 
