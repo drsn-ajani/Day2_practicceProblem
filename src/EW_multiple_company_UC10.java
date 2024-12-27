@@ -1,11 +1,11 @@
-class CompanyEmpWage {
+class CompanyEmpWage_UC10 {
     public final String Company;
     public final int emp_rate_per_hour;
     public final int max_working_hour;
     public final int max_working_days;
     public int total_emp_wage;
 
-    public CompanyEmpWage(String Company, int emp_rate_per_hour, int max_working_hour, int max_working_days) {
+    public CompanyEmpWage_UC10(String Company, int emp_rate_per_hour, int max_working_hour, int max_working_days) {
         this.Company = Company;
         this.emp_rate_per_hour = emp_rate_per_hour;
         this.max_working_hour = max_working_hour;
@@ -28,14 +28,14 @@ public class EW_multiple_company_UC10 {
     private final int IS_FULL_TIME = 2;
 
     private int number_of_company = 0;
-    public CompanyEmpWage[] CompanyEmpWageArray;
+    public CompanyEmpWage_UC10[] CompanyEmpWageArray;
 
     public EW_multiple_company_UC10() {
-        CompanyEmpWageArray = new CompanyEmpWage[5];
+        CompanyEmpWageArray = new CompanyEmpWage_UC10[5];
     }
 
     private void addCompany(String Company, int emp_rate_per_hour, int max_working_hour, int max_working_days) {
-        CompanyEmpWageArray[number_of_company] = new CompanyEmpWage(Company, emp_rate_per_hour, max_working_hour, max_working_days);
+        CompanyEmpWageArray[number_of_company] = new CompanyEmpWage_UC10(Company, emp_rate_per_hour, max_working_hour, max_working_days);
         number_of_company++;
     }
 
@@ -48,7 +48,7 @@ public class EW_multiple_company_UC10 {
         }
     }
 
-    private int compute_wage(CompanyEmpWage companyEmpWage) {
+    private int compute_wage(CompanyEmpWage_UC10 companyEmpWage) {
         int worked_days = 0, worked_hour = 0;
 
         while (worked_days < companyEmpWage.max_working_days && worked_hour < companyEmpWage.max_working_hour) {
